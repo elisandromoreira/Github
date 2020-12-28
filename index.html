@@ -1,0 +1,91 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="src/sass/main.scss" />
+
+    <script defer src="src/js/controller.js"></script>
+
+    <title>Search Hub || Buscador de Usuários do Github!</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header class="header">
+        <a href="/">
+          <img
+            src="src/img/logo.svg"
+            alt="Um ícone com um usuário sobreposto por um icone de busca seguido do texto Search Hub!"
+            class="header__logo"
+          />
+        </a>
+        <h1 class="header__title">Buscador de Usuários do Github</h1>
+      </header>
+      <!-- MAIN CONTENT -->
+      <main class="content">
+        <!-- SEARCH COMPONENT -->
+        <form class="search">
+          <input
+            type="text"
+            class="search__field"
+            placeholder="Digite um nome de usuário..."
+          />
+          <button class="btn search__btn">
+            <svg class="search__icon">
+              <use href="src/img/icons.svg#icon-search"></use>
+            </svg>
+            <span>Buscar</span>
+          </button>
+        </form>
+
+        <div class="result-wrapper">
+          <!-- USER RESULT COMPONENT  -->
+          <div class="user">
+            <div class="message">
+              <div>
+                <svg>
+                  <use href="src/img/icons.svg#icon-smile"></use>
+                </svg>
+              </div>
+              <p>Para iniciar digite um usuário para realizar uma busca!</p>
+            </div>
+          </div>
+          <!-- BUTTONS NAVIGATION COMPONENT  -->
+          <div class="navigation"></div>
+          <!-- REPOS RESULT COMPONENT  -->
+          <div class="repos-results">
+            <ul class="repos"></ul>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="copyright">
+        <p class="copyright__text">
+          Made by
+          <a
+            class="copyright__github"
+            target="_blank"
+            href="https://github.com/elisandromoreira"
+          >
+            Elisandro Moreira</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

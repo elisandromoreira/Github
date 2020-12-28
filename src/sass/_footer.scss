@@ -1,0 +1,19 @@
+.copyright {
+  color: $color-grey-light-2;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+
+  &__text {
+    .heart {
+      color: $color-primary;
+    }
+  }
+
+  &__github {
+    &:link,
+    &:visited {
+      color: $color-primary;
+      text-decoration: none;
+    }
+  }
+}
