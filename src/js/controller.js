@@ -22,6 +22,8 @@ const controlResult = async function () {
     reposView._clear();
   } catch (err) {
     resultView.renderError();
+    buttonsView._clear();
+    reposView._clear();
   }
 };
 
@@ -37,7 +39,7 @@ const controlButtonsResults = async function (query) {
     reposView.renderSpinner();
 
     const id = window.location.hash.slice(1);
-
+    if (!id) return;
     // Get the endpoint
     const endpoint = `${id}/${query}`;
 
@@ -46,7 +48,9 @@ const controlButtonsResults = async function (query) {
 
     // Rendering Repos
     reposView.render(model.state.repos.list);
-  } catch (err) {}
+  } catch (err) {
+    reposView._clear();
+  }
 };
 
 const init = function () {
