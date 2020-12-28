@@ -19,6 +19,7 @@ const controlResult = async function () {
     // 2) Rendering result
     resultView.render(model.state.result);
     buttonsView.renderButtons();
+    reposView._clear();
   } catch (err) {
     resultView.renderError();
   }
